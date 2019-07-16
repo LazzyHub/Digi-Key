@@ -47,7 +47,7 @@ def product_description(key):
     n = 0
     while key in response['Parts'][n]['ProductDescription'] and n < 10:
         n += 1
-    return response['Parts'][n]['ProductDescription']
+    return response['Parts'][n]#['ProductDescription']
 
 
 def describe_list(path, column, csv_output, encoding='utf-8', delimiter=';'):
@@ -64,26 +64,30 @@ def describe_list(path, column, csv_output, encoding='utf-8', delimiter=';'):
         line_items.append(line_item)
         # queries.append(line_item[column])
         try:
-            queries.append({line_item[column]: product_description(line_item[column])})
+            queries.append({'Part Number': line_item[column], 'Description' : product_description(line_item[column])['ProductDescription'],
+                            'URL' : 'https://www.digikey.com' + product_description(line_item[column])['PartUrl'],
+                            'Datasheet' : product_description(line_item[column])['PrimaryDatasheet']})
         except IndexError:
-            queries.append({line_item[column]: 'Not found'})
+            queries.append({'Part Number': line_item[column], 'Description' : 'Not found'})
 
     with open(csv_output, 'w', newline='', encoding=encoding) as csv_output:
-        csv_writer = csv.DictWriter(csv_output, fieldnames=['Part Number', 'Description'], delimiter=delimiter)
+        csv_writer = csv.DictWriter(csv_output, fieldnames=['Part Number', 'Description', 'URL', 'Datasheet'], delimiter=delimiter)
         csv_writer.writeheader()
         for i in range(len(queries)):
-            for part in queries[i]:
-                csv_writer.writerow({'Part Number': part, 'Description': queries[i][part]})
-                print(queries[i])
+            row = {}
+            for field in queries[i]:
+                row[field] = queries[i][field]
+            csv_writer.writerow(row)
+            print(queries[i])
 
 
     #print(queries)
 
-# path = r'C:\Users\vmezin\Documents\Копия Вектор СВЧ ч.1.csv'
-# column = 'Номенклатура'
-# output = path[0:-4] + '_described.csv'
-#get_token()
-# describe_list(path, column, output)
+path = r'C:\Users\vmezin\Documents\Копия Вектор СВЧ ч.1.csv'
+column = 'Номенклатура'
+output = path[0:-4] + '_described.csv'
+get_token()
+describe_list(path, column, output)
 #print(product_description('HMC520A'))
 
 # csv_file = open(r"C:\Users\vmezin\Documents\Копия Вектор СВЧ ч.1.csv", "r")

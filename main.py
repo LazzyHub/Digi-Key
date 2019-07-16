@@ -5,7 +5,7 @@ import os
 import csv
 import back
 
-print(test)
+
 class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
     def __init__(self):
         # Это здесь нужно для доступа к переменным, методам
