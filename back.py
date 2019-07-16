@@ -55,7 +55,6 @@ def describe_list(path, column, csv_output, encoding='utf-8', delimiter=';'):
     csv_reader = csv.DictReader(csv_file, delimiter=delimiter)
     line_items = []
     queries = []
-
     for line_item in csv_reader:
         # print(line_item)
         # Skip line items without part numbers and manufacturers
@@ -78,16 +77,16 @@ def describe_list(path, column, csv_output, encoding='utf-8', delimiter=';'):
             for field in queries[i]:
                 row[field] = queries[i][field]
             csv_writer.writerow(row)
-            print(queries[i])
+            #print(queries[i])
 
 
     #print(queries)
 
-path = r'C:\Users\vmezin\Documents\Копия Вектор СВЧ ч.1.csv'
-column = 'Номенклатура'
-output = path[0:-4] + '_described.csv'
-get_token()
-describe_list(path, column, output)
+# path = 'csv_file.csv'
+# column = 'Номенклатура'
+# output = path[0:-4] + '_described.csv'
+# get_token()
+# describe_list(path, column, output)
 #print(product_description('HMC520A'))
 
 # csv_file = open(r"C:\Users\vmezin\Documents\Копия Вектор СВЧ ч.1.csv", "r")
