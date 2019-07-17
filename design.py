@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(312, 229)
+        MainWindow.resize(312, 260)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("footer_company_logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -44,8 +44,14 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.comboBox)
         self.btnDescribe = QtWidgets.QPushButton(self.centralwidget)
         self.btnDescribe.setEnabled(False)
+        self.btnDescribe.setCheckable(False)
+        self.btnDescribe.setFlat(False)
         self.btnDescribe.setObjectName("btnDescribe")
         self.verticalLayout.addWidget(self.btnDescribe)
+        self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
+        self.progressBar.setProperty("value", 0)
+        self.progressBar.setObjectName("progressBar")
+        self.verticalLayout.addWidget(self.progressBar)
         self.formLayout_2.setLayout(2, QtWidgets.QFormLayout.FieldRole, self.verticalLayout)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusBar = QtWidgets.QStatusBar(MainWindow)
@@ -63,4 +69,5 @@ class Ui_MainWindow(object):
         self.btnBrowse.setText(_translate("MainWindow", "Browse"))
         self.label.setText(_translate("MainWindow", "Название столбца с p/n"))
         self.btnDescribe.setText(_translate("MainWindow", "Describe"))
+        self.progressBar.setFormat(_translate("MainWindow", "%p%"))
 

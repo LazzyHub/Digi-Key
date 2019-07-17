@@ -452,3 +452,134 @@ console.error: "Could not write session state file " (new Error("_initWorker cal
 [Child 3944, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
 [Child 1976, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
 [Child 1976, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1563361841326	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.l8qTjm4Mxw1p"
+1563361843629	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563361843630	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1563361843630	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563361843630	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://activity-stream/lib/ActivityStreamPrefs.jsm, line 23: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIPrefBranch.removeObserver]
+1563361847950	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+makeAddonVisible@XPIDatabase.jsm:2067:10
+addToDatabase@XPIDatabase.jsm:1996:12
+install@XPIInstall.jsm:3857:27
+_activateAddon@XPIInstall.jsm:3876:7
+1563361847950	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+addToDatabase@XPIDatabase.jsm:1999:10
+install@XPIInstall.jsm:3857:27
+_activateAddon@XPIInstall.jsm:3876:7
+1563361847951	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+syncWithDB@XPIProvider.jsm:640:25
+addAddon@XPIProvider.jsm:773:14
+addAddon@XPIProvider.jsm:1546:21
+install@XPIInstall.jsm:3859:17
+_activateAddon@XPIInstall.jsm:3876:7
+[Child 8064, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8064, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3540, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1563361848001	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+makeAddonVisible@XPIDatabase.jsm:2067:10
+addToDatabase@XPIDatabase.jsm:1996:12
+install@XPIInstall.jsm:3857:27
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848002	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+addToDatabase@XPIDatabase.jsm:1999:10
+install@XPIInstall.jsm:3857:27
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848002	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+syncWithDB@XPIProvider.jsm:640:25
+addAddon@XPIProvider.jsm:773:14
+addAddon@XPIProvider.jsm:1546:21
+install@XPIInstall.jsm:3859:17
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848014	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+makeAddonVisible@XPIDatabase.jsm:2067:10
+addToDatabase@XPIDatabase.jsm:1996:12
+install@XPIInstall.jsm:3857:27
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848014	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+addToDatabase@XPIDatabase.jsm:1999:10
+install@XPIInstall.jsm:3857:27
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848015	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+syncWithDB@XPIProvider.jsm:640:25
+addAddon@XPIProvider.jsm:773:14
+addAddon@XPIProvider.jsm:1546:21
+install@XPIInstall.jsm:3859:17
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848027	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+makeAddonVisible@XPIDatabase.jsm:2067:10
+addToDatabase@XPIDatabase.jsm:1996:12
+install@XPIInstall.jsm:3857:27
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848027	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+addToDatabase@XPIDatabase.jsm:1999:10
+install@XPIInstall.jsm:3857:27
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848028	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+syncWithDB@XPIProvider.jsm:640:25
+addAddon@XPIProvider.jsm:773:14
+addAddon@XPIProvider.jsm:1546:21
+install@XPIInstall.jsm:3859:17
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848536	Marionette	INFO	Listening on port 55307
+1563361848561	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+makeAddonVisible@XPIDatabase.jsm:2067:10
+addToDatabase@XPIDatabase.jsm:1996:12
+install@XPIInstall.jsm:3857:27
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848562	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+addToDatabase@XPIDatabase.jsm:1999:10
+install@XPIInstall.jsm:3857:27
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848562	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+syncWithDB@XPIProvider.jsm:640:25
+addAddon@XPIProvider.jsm:773:14
+addAddon@XPIProvider.jsm:1546:21
+install@XPIInstall.jsm:3859:17
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848587	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+makeAddonVisible@XPIDatabase.jsm:2067:10
+addToDatabase@XPIDatabase.jsm:1996:12
+install@XPIInstall.jsm:3857:27
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848588	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+addToDatabase@XPIDatabase.jsm:1999:10
+install@XPIInstall.jsm:3857:27
+_activateAddon@XPIInstall.jsm:3876:7
+1563361848588	addons.xpi-utils	WARN	Error: XPI database modified after shutdown began(resource://gre/modules/addons/XPIDatabase.jsm:1326:17) JS Stack trace: saveChanges@XPIDatabase.jsm:1326:17
+syncWithDB@XPIProvider.jsm:640:25
+addAddon@XPIProvider.jsm:773:14
+addAddon@XPIProvider.jsm:1546:21
+install@XPIInstall.jsm:3859:17
+_activateAddon@XPIInstall.jsm:3876:7
+[Child 5492, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5492, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: resource://activity-stream/lib/PlacesFeed.jsm, line 171: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavHistoryService.addObserver]
+JavaScript error: resource://gre/modules/ExtensionSettingsStore.jsm, line 105: Error: The ExtensionSettingsStore was accessed before the initialize promise resolved.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 834: Error: Connection is not open.
+JavaScript error: resource://gre/modules/IndexedDB.jsm, line 349: UnknownError: The operation failed for reasons unrelated to the database itself and not covered by any other error code.
+console.log: "RemoteSettingsWorker error: UnknownError: The operation failed for reasons unrelated to the database itself and not covered by any other error code."
+1563361850538	Marionette	INFO	Stopped listening on port 55307
+1563362010872	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.ZzwSIsQDXP3L"
+1563362011819	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563362011819	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1563362011819	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563362011819	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+[Child 6336, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6336, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3764, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3764, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1563362044580	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.KMPAYZfULGYp"
+1563362045780	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563362045780	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1563362045780	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563362045780	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563362049818	Marionette	INFO	Listening on port 55472
+1563362050058	Marionette	WARN	TLS certificate errors will be ignored for this session
+1563362059761	Marionette	INFO	Stopped listening on port 55472
+[Child 5088, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7176, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7176, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 7196, Gecko_IOThread] WARNING: file z:/task_1562356069/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[Parent 7196, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 7196, Gecko_IOThread] WARNING: file z:/task_1562356069/build/src/ipc/chromium/src/base/process_util_win.cc, line 160

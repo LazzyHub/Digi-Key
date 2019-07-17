@@ -5,6 +5,8 @@ import json
 from accesstoken import get_access_token
 from accesstoken import refresh_access_token
 import requests
+from PyQt5 import QtWidgets
+
 
 
 def get_token():
@@ -54,11 +56,15 @@ def product_description(key):
     return response['Parts'][n]#['ProductDescription']
 
 
-def describe_list(path, column, csv_output, encoding='utf-8', delimiter=';'):
+def describe_list(path, column, csv_output, app, encoding='utf-8', delimiter=';'):
+    csv_file = open(path, "r", encoding=encoding)
+    row_count = sum(1 for row in csv_file) - 1
     csv_file = open(path, "r", encoding=encoding)
     csv_reader = csv.DictReader(csv_file, delimiter=delimiter)
     line_items = []
     queries = []
+    progress = 0
+    progress_delta = 100/row_count
     for line_item in csv_reader:
         # print(line_item)
         # Skip line items without part numbers and manufacturers
@@ -74,6 +80,11 @@ def describe_list(path, column, csv_output, encoding='utf-8', delimiter=';'):
                             })
         except IndexError:
             queries.append({'Part Number': line_item[column], 'Description' : 'Not found'})
+        progress += progress_delta
+        print(int(progress))
+        app.progressBar.setProperty("value", progress)
+    app.progressBar.setProperty("value", 100)
+
 
     with open(csv_output, 'w', newline='', encoding=encoding) as csv_output:
         csv_writer = csv.DictWriter(csv_output, fieldnames=['Part Number', 'Manufacturer', 'Description', 'URL', 'Datasheet'], delimiter=delimiter)
@@ -87,8 +98,8 @@ def describe_list(path, column, csv_output, encoding='utf-8', delimiter=';'):
 
 
     #print(queries)
-
-# path = 'csv_file.csv'
+#
+# path = 'C:/Users/vmezin/Documents/Копия Вектор СВЧ ч.1 - копия.csv'
 # column = 'Номенклатура'
 # output = path[0:-4] + '_described.csv'
 # get_token()

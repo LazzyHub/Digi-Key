@@ -67,7 +67,7 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         else:
             csv_output = path[0:-4] + '_described.csv'
         back.get_token()
-        back.describe_list(csv_path, column, csv_output)
+        back.describe_list(csv_path, column, csv_output, self)
         if path != csv_path:
             remove(csv_path)
         self.statusBar.showMessage('Done! Description in ' + csv_output)

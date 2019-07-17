@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>312</width>
-    <height>229</height>
+    <height>260</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -51,7 +51,7 @@
         <item>
          <widget class="QLineEdit" name="linePath">
           <property name="placeholderText">
-           <string>Путь к csv файлу</string>
+           <string>Путь к .csv или Excel файлу</string>
           </property>
          </widget>
         </item>
@@ -87,6 +87,16 @@
         </property>
         <property name="flat">
          <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>24</number>
+        </property>
+        <property name="format">
+         <string>%p%</string>
         </property>
        </widget>
       </item>
