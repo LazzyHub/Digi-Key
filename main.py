@@ -1,7 +1,7 @@
-import sys  # sys нужен для передачи argv в QApplication
+from sys import argv # sys нужен для передачи argv в QApplication
 from PyQt5 import QtWidgets
 import design
-import os
+from os import remove
 import csv
 import back
 import xlrd
@@ -17,7 +17,7 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         self.setupUi(self)  # Это нужно для инициализации нашего дизайна
         self.btnBrowse.clicked.connect(self.browse_folder)
         self.btnDescribe.clicked.connect(self.describe_csv)
-        self.statusBar.showMessage('Choose .csv file')
+        self.statusBar.showMessage('Choose .csv or Excel file')
 
 
     def set_combo(self):
@@ -59,6 +59,7 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
 
     def describe_csv(self):
         global csv_path
+        self.statusBar.showMessage('Processing...')
         path = self.linePath.text()
         column = self.comboBox.currentText()
         if path[-5:] == '.xlsx':
@@ -68,14 +69,12 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         back.get_token()
         back.describe_list(csv_path, column, csv_output)
         if path != csv_path:
-            os.remove(csv_path)
-        self.close()
-
-
+            remove(csv_path)
+        self.statusBar.showMessage('Done! Description in ' + csv_output)
 
 
 def main():
-    app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication
+    app = QtWidgets.QApplication(argv)  # Новый экземпляр QApplication
     window = ExampleApp()  # Создаём объект класса ExampleApp
     window.show()  # Показываем окно
     app.exec_()  # и запускаем приложение

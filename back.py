@@ -9,13 +9,17 @@ import requests
 
 def get_token():
     global access_token, refresh_token
-    with open('tokens.txt', 'r') as f:
-        refresh_token = f.readline().strip()
     try:
+        with open('tokens.txt', 'r') as f:
+            refresh_token = f.readline().strip()
         tokens = refresh_access_token(refresh_token)
         access_token = tokens['access_token']
         refresh_token = tokens['refresh_token']
     except KeyError:
+        tokens = get_access_token()
+        access_token = tokens['access_token']
+        refresh_token = tokens['refresh_token']
+    except FileNotFoundError:
         tokens = get_access_token()
         access_token = tokens['access_token']
         refresh_token = tokens['refresh_token']
@@ -65,12 +69,14 @@ def describe_list(path, column, csv_output, encoding='utf-8', delimiter=';'):
         try:
             queries.append({'Part Number': line_item[column], 'Description' : product_description(line_item[column])['ProductDescription'],
                             'URL' : 'https://www.digikey.com' + product_description(line_item[column])['PartUrl'],
-                            'Datasheet' : product_description(line_item[column])['PrimaryDatasheet']})
+                            'Datasheet' : product_description(line_item[column])['PrimaryDatasheet'],
+                            'Manufacturer' : product_description(line_item[column])['ManufacturerName']['Text']
+                            })
         except IndexError:
             queries.append({'Part Number': line_item[column], 'Description' : 'Not found'})
 
     with open(csv_output, 'w', newline='', encoding=encoding) as csv_output:
-        csv_writer = csv.DictWriter(csv_output, fieldnames=['Part Number', 'Description', 'URL', 'Datasheet'], delimiter=delimiter)
+        csv_writer = csv.DictWriter(csv_output, fieldnames=['Part Number', 'Manufacturer', 'Description', 'URL', 'Datasheet'], delimiter=delimiter)
         csv_writer.writeheader()
         for i in range(len(queries)):
             row = {}
@@ -87,7 +93,7 @@ def describe_list(path, column, csv_output, encoding='utf-8', delimiter=';'):
 # output = path[0:-4] + '_described.csv'
 # get_token()
 # describe_list(path, column, output)
-#print(product_description('HMC520A'))
+# print(product_description('HMC520A'))
 
 # csv_file = open(r"C:\Users\vmezin\Documents\Копия Вектор СВЧ ч.1.csv", "r")
 # csv_reader = csv.DictReader(csv_file, delimiter=';')

@@ -1,10 +1,15 @@
+import xlrd
 import csv
 
-path = r'C:\Users\vmezin\Documents\Копия Вектор СВЧ ч.1.csv'
-column = 'Номенклатура'
-output = path[0:-4] + '_described.csv'
+def csv_from_excel(input):
+    wb = xlrd.open_workbook(input)
+    sh = wb.sheet_by_index(0)
+    your_csv_file = open('csv_file.csv', 'w', encoding='utf-8', newline='')
+    wr = csv.writer(your_csv_file, quoting=csv.QUOTE_ALL, delimiter=';')
 
-with open(path, 'r', encoding='utf-8') as file:
-    reader = csv.reader(file, delimiter=';')
-    columns = next(reader)
-    print(columns)
+    for rownum in range(sh.nrows):
+        wr.writerow(sh.row_values(rownum))
+
+    your_csv_file.close()
+
+csv_from_excel('C:/Users/vmezin/Documents/Копия Вектор СВЧ ч.1.xlsx')

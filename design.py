@@ -59,7 +59,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "ASCParser"))
         self.label_2.setText(_translate("MainWindow", "Путь к таблице"))
-        self.linePath.setPlaceholderText(_translate("MainWindow", "Путь к csv файлу"))
+        self.linePath.setPlaceholderText(_translate("MainWindow", "Путь к .csv или Excel файлу"))
         self.btnBrowse.setText(_translate("MainWindow", "Browse"))
         self.label.setText(_translate("MainWindow", "Название столбца с p/n"))
         self.btnDescribe.setText(_translate("MainWindow", "Describe"))
