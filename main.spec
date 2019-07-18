@@ -5,7 +5,7 @@ block_cipher = None
 
 a = Analysis(['main.py'],
              pathex=['C:\\Users\\vmezin\\PycharmProjects\\Digi-Key'],
-             binaries=[],
+             binaries=[('footer_company_logo.png', 'img')],
              datas=[],
              hiddenimports=[],
              hookspath=[],
@@ -30,4 +30,4 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=True )
+          console=False )

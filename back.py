@@ -3,6 +3,7 @@ import json
 from accesstoken import get_access_token
 from accesstoken import refresh_access_token
 import requests
+from time import sleep
 
 
 def get_token():  # получаем токен доступа
@@ -73,6 +74,7 @@ def describe_list(path, column, csv_output, app, encoding='utf-8', delimiter=';'
         except IndexError:   # если в описании нет нужного поля - значит компонент не найден на сайте
             queries.append({'Part Number': line_item[column], 'Description': 'Not found'})
         progress += progress_delta   # считаем прогресс
+        sleep(0.1)
         app.progressBar.setProperty("value", progress)  # обновляем прогрессбар
     app.progressBar.setProperty("value", 100)  # после обработки всего файла пробресс = 100%
 
