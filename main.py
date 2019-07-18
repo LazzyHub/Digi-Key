@@ -9,43 +9,41 @@ import xlrd
 
 class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
 
-
     def __init__(self):
         # Это здесь нужно для доступа к переменным, методам
         # и т.д. в файле design.py
         super().__init__()
         self.setupUi(self)  # Это нужно для инициализации нашего дизайна
-        self.btnBrowse.clicked.connect(self.browse_folder)
-        self.btnDescribe.clicked.connect(self.describe_csv)
-        self.statusBar.showMessage('Choose .csv or Excel file')
+        self.btnBrowse.clicked.connect(self.browse_folder)  # отработка нажатия кнопки Browse
+        self.btnDescribe.clicked.connect(self.describe_csv)  # отработка нажатия кнопки Describe
+        self.statusBar.showMessage('Choose .csv or Excel file')  # инициализация статусбара
 
-
-    def set_combo(self):
-        global csv_path
-        if self.linePath.text() != '':
+    def set_combo(self):  # создание элементов комбобокса
+        global csv_path  # переменная пути к csv файлу (исходному или созданному из xls)
+        if self.linePath.text() != '':  # работаем только если строка пути не пустая
             self.comboBox.clear()
-            if self.linePath.text()[-4:] == '.csv':
+            if self.linePath.text()[-4:] == '.csv':  # если выбран csv файл
                 self.statusBar.showMessage('Ready to describe')
-                self.btnDescribe.setEnabled(True)
-                with open(self.linePath.text(), 'r', encoding='utf-8') as file:
+                self.btnDescribe.setEnabled(True)  # активируем кнопку
+                with open(self.linePath.text(), 'r', encoding='utf-8') as file:  # открываем выбранный файл
+                    reader = csv.reader(file, delimiter=';')  # объект ридера
+                    columns = next(reader)  # читаем первую строку файла
+                    self.comboBox.addItems(columns)  # создаем элементы комбобокса из первой строки
+                csv_path = self.linePath.text()  # переменная пути равна пути к выбранному файлу
+            elif self.linePath.text()[-4:] == '.xls' or self.linePath.text()[-5:] == '.xlsx':  # если выбран Excel файл
+                csv_from_excel(self.linePath.text())  # конвертируем excel-файл во временный csv
+                self.statusBar.showMessage('Ready to describe')
+                self.btnDescribe.setEnabled(True)  # активируем кнопку
+                with open('csv_file.csv', 'r', encoding='utf-8') as file:  # открываем временный csv файл
                     reader = csv.reader(file, delimiter=';')
                     columns = next(reader)
                     self.comboBox.addItems(columns)
-                csv_path = self.linePath.text()
-            elif self.linePath.text()[-4:] == '.xls' or self.linePath.text()[-5:] == '.xlsx':
-                csv_from_excel(self.linePath.text())
-                self.statusBar.showMessage('Ready to describe')
-                self.btnDescribe.setEnabled(True)
-                with open('csv_file.csv', 'r', encoding='utf-8') as file:
-                    reader = csv.reader(file, delimiter=';')
-                    columns = next(reader)
-                    self.comboBox.addItems(columns)
-                csv_path = 'csv_file.csv'
+                csv_path = 'csv_file.csv'  # переменная пути ведет к временному файлу
             else:
-                self.statusBar.showMessage('Not .csv file!')
-                self.btnDescribe.setEnabled(False)
+                self.statusBar.showMessage('Not .csv or Excel file!')   # если выбран любой другой формат
+                self.btnDescribe.setEnabled(False)                      # деактивируем кнопку
 
-    def browse_folder(self):
+    def browse_folder(self):  # функция выбора файла
         self.linePath.clear()  # На случай, если в списке уже есть элементы
         path = QtWidgets.QFileDialog.getOpenFileName(self, "Выберите папку")
         # открыть диалог выбора директории и установить значение переменной
@@ -53,24 +51,22 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
 
         if path:  # не продолжать выполнение, если пользователь не выбрал директорию
             self.linePath.setText(str(path[0]))  # добавить путь к файлу в строку
-        self.set_combo()
+        self.set_combo()  # создание элементов комбобоква
 
-
-
-    def describe_csv(self):
+    def describe_csv(self):  # описываемкомпоненты из csv
         global csv_path
         self.statusBar.showMessage('Processing...')
-        path = self.linePath.text()
-        column = self.comboBox.currentText()
-        if path[-5:] == '.xlsx':
+        path = self.linePath.text()  # путь берем из строки пути
+        column = self.comboBox.currentText()  # нужную колонку - выбранную в комбобоксе
+        if path[-5:] == '.xlsx':          # описываем имя результирующего файла
             csv_output = path[0:-5] + '_described.csv'
         else:
             csv_output = path[0:-4] + '_described.csv'
-        back.get_token()
-        back.describe_list(csv_path, column, csv_output, self)
-        if path != csv_path:
+        back.get_token()  # получаем токен доступа
+        back.describe_list(csv_path, column, csv_output, self)  # делаем запросы по каждому пункту из выбранной колонки
+        if path != csv_path:  # если csv файл был временный - удаляем его
             remove(csv_path)
-        self.statusBar.showMessage('Done! Description in ' + csv_output)
+        self.statusBar.showMessage('Done! Description in ' + csv_output)  # показываем путь к результату
 
 
 def main():
@@ -79,16 +75,17 @@ def main():
     window.show()  # Показываем окно
     app.exec_()  # и запускаем приложение
 
-def csv_from_excel(input):
-    wb = xlrd.open_workbook(input)
-    sh = wb.sheet_by_index(0)
-    your_csv_file = open('csv_file.csv', 'w', encoding='utf-8', newline='')
-    wr = csv.writer(your_csv_file, quoting=csv.QUOTE_ALL, delimiter=';')
+
+def csv_from_excel(input):   # конвертируем xls в csv
+    wb = xlrd.open_workbook(input)  # открываем xls
+    sh = wb.sheet_by_index(0)  # выбираем лист
+    your_csv_file = open('csv_file.csv', 'w', encoding='utf-8', newline='')  # создаем временный файл
+    wr = csv.writer(your_csv_file, quoting=csv.QUOTE_ALL, delimiter=';')  # объект райтера для временного файла
 
     for rownum in range(sh.nrows):
-        wr.writerow(sh.row_values(rownum))
+        wr.writerow(sh.row_values(rownum))  # построчно переписываем из xls в csv
 
-    your_csv_file.close()
+    your_csv_file.close()   # закрываем временный файл
 
 if __name__ == '__main__':  # Если мы запускаем файл напрямую, а не импортируем
     main()  # то запускаем функцию main()
