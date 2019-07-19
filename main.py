@@ -5,6 +5,7 @@ from os import remove
 import csv
 import back
 import xlrd
+from baseback import add_to_base
 
 
 class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
@@ -17,6 +18,36 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         self.btnBrowse.clicked.connect(self.browse_folder)  # отработка нажатия кнопки Browse
         self.btnDescribe.clicked.connect(self.describe_csv)  # отработка нажатия кнопки Describe
         self.statusBar.showMessage('Choose .csv or Excel file')  # инициализация статусбара
+        self.itemSelect.currentTextChanged.connect(self.set_units)
+        self.itemSelect.addItems(['Резистор', 'Конденсатор'])
+        self.tabWidget.currentChanged.connect(self.set_statusbar)
+        self.toBaseBtn.clicked.connect(self.add_to_base)
+
+    def add_to_base(self):
+        self.statusBar.showMessage('Wait...')
+        element = self.itemSelect.currentText()
+        value = self.lineEdit.text()
+        units = self.unitsBox.currentText()
+        try:
+            add_to_base(element, value, units)
+            self.statusBar.showMessage('Element added')
+        except ValueError:
+            self.statusBar.showMessage('Set different value')
+
+
+
+    def set_statusbar(self):
+        if self.tabWidget.currentWidget() == self.describeTab:
+            self.statusBar.showMessage('Choose .csv or Excel file')
+        else:
+            self.statusBar.showMessage('')
+
+    def set_units(self):
+        self.unitsBox.clear()
+        if self.itemSelect.currentText() == 'Резистор':
+            self.unitsBox.addItems(['Ohm', 'kOhm'])
+        elif self.itemSelect.currentText() == 'Конденсатор':
+            self.unitsBox.addItems(['pF', 'nF'])
 
     def set_combo(self):  # создание элементов комбобокса
         global csv_path  # переменная пути к csv файлу (исходному или созданному из xls)
@@ -62,7 +93,7 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
             csv_output = path[0:-5] + '_described.csv'
         else:
             csv_output = path[0:-4] + '_described.csv'
-        back.get_token()  # получаем токен доступа
+        #back.get_token()  # получаем токен доступа
         back.describe_list(csv_path, column, csv_output, self)  # делаем запросы по каждому пункту из выбранной колонки
         if path != csv_path:  # если csv файл был временный - удаляем его
             remove(csv_path)

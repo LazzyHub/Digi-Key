@@ -27,6 +27,7 @@ def get_token():  # получаем токен доступа
 
 
 def product_description(key):  # получаем описание компонента по названию
+    get_token()  # получаем токен доступа
     url = 'https://api.digikey.com/services/partsearch/v2/keywordsearch'
     payload = {
               'Keywords': key,
@@ -66,7 +67,7 @@ def describe_list(path, column, csv_output, app, encoding='utf-8', delimiter=';'
         try:
             product = product_description(line_item[column])  # получаем описание элемента
             queries.append({'Part Number': line_item[column],  # парт намбер берем из таблицы
-                            'Description': product['ProductDescription'],  # берем из описания нужные поля
+                            'Description': product['DetailedDescription'],  # берем из описания нужные поля
                             'URL': 'https://www.digikey.com' + product['PartUrl'],
                             'Datasheet': product['PrimaryDatasheet'],
                             'Manufacturer': product['ManufacturerName']['Text']
