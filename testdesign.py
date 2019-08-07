@@ -19,7 +19,6 @@ def csv_from_excel(input_):  # конвертируем xls в csv
 
     for rownum in range(sh.nrows):
         wr.writerow(sh.row_values(rownum))  # построчно переписываем из xls в csv
-
     your_csv_file.close()  # закрываем временный файл
 
 
