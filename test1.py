@@ -1,15 +1,28 @@
-import xlrd
-import csv
+import sys
+from PyQt5.QtWidgets import *
+from PyQt5 import QtGui
+#from PyQt5.QtWidgets import (QWidget, QLabel, QLineEdit, QTextEdit, QGridLayout,
+#                            QApplication, QComboBox, QPushButton, QProgressBar, QTabWidget, QVBoxLayout)
 
-def csv_from_excel(input):
-    wb = xlrd.open_workbook(input)
-    sh = wb.sheet_by_index(0)
-    your_csv_file = open('csv_file.csv', 'w', encoding='utf-8', newline='')
-    wr = csv.writer(your_csv_file, quoting=csv.QUOTE_ALL, delimiter=';')
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
 
-    for rownum in range(sh.nrows):
-        wr.writerow(sh.row_values(rownum))
 
-    your_csv_file.close()
+    def initUI(self):
+        widget = QWidget()
+        self.setCentralWidget(widget)
+        line = QLabel('qwerty')
+        grid = QVBoxLayout()
+        grid.addWidget(line)
 
-csv_from_excel('C:/Users/vmezin/Documents/Копия Вектор СВЧ ч.1.xlsx')
+
+        self.setWindowTitle('Test')
+        self.show()
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    mainWindow = MainWindow()
+    sys.exit(app.exec_())

@@ -6,9 +6,11 @@ import csv
 import back
 import xlrd
 from baseback import add_to_base
+import sys
+import traceback
 
 
-class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
+class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow, ):
 
     def __init__(self):
         # Это здесь нужно для доступа к переменным, методам
@@ -93,11 +95,10 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
             csv_output = path[0:-5] + '_described.csv'
         else:
             csv_output = path[0:-4] + '_described.csv'
-        #back.get_token()  # получаем токен доступа
         back.describe_list(csv_path, column, csv_output, self)  # делаем запросы по каждому пункту из выбранной колонки
         if path != csv_path:  # если csv файл был временный - удаляем его
             remove(csv_path)
-        self.statusBar.showMessage('Done! Description in ' + csv_output)  # показываем путь к результату
+        self.statusBar.showMessage(' '.join(['Done! Description in', csv_output]))  # показываем путь к результату
 
 
 def main():
@@ -118,6 +119,19 @@ def csv_from_excel(input):   # конвертируем xls в csv
 
     your_csv_file.close()   # закрываем временный файл
 
+
+def log_uncaught_exceptions(ex_cls, ex, tb):
+    text = '{}: {}:\n'.format(ex_cls.__name__, ex)
+
+    text += ''.join(traceback.format_tb(tb))
+
+    print(text)
+    QtWidgets.QMessageBox.critical(None, 'Error', text)
+
+    sys.exit()
+
+
+sys.excepthook = log_uncaught_exceptions
 
 if __name__ == '__main__':  # Если мы запускаем файл напрямую, а не импортируем
     main()  # то запускаем функцию main()

@@ -4,6 +4,7 @@ from accesstoken import get_access_token
 from accesstoken import refresh_access_token
 import requests
 from time import sleep
+import accessdb
 
 
 def get_token():  # получаем токен доступа
@@ -27,6 +28,7 @@ def get_token():  # получаем токен доступа
 
 
 def product_description(key):  # получаем описание компонента по названию
+    global rate_limit
     get_token()  # получаем токен доступа
     url = 'https://api.digikey.com/services/partsearch/v2/keywordsearch'
     payload = {
@@ -43,7 +45,11 @@ def product_description(key):  # получаем описание компон�
 
     res = requests.post(url, data=json.dumps(payload), headers=headers)  # запрос к API по переданному ключевому слову
     response = json.loads(res.content)   # получаем ответ в формате json
+    rate_limit = res.headers['X-RateLimit-Remaining'][18:-1]
+    print(rate_limit)
     n = 0
+    if res.status_code == 429:
+        raise Exception('Превышен лимит запросов')
     while key in response['Parts'][n]['ProductDescription'] and n < 10:
         # если в описании компонента содержится название микросхемы - скорее всего это eval board для нее
         # поэтому ищем первый компонент без ключевого слова в описании
@@ -64,24 +70,33 @@ def describe_list(path, column, csv_output, app, encoding='utf-8', delimiter=';'
         if not line_item[column]:  # если выбранный столбец пустой - пропускаем
             continue
         line_items.append(line_item)  # объединяем строки в один список
+        part_number = line_item[column]
         try:
-            product = product_description(line_item[column])  # получаем описание элемента
-            queries.append({'Part Number': line_item[column],  # парт намбер берем из таблицы
+            product = product_description(part_number)  # получаем описание элемента
+            product['DetailedDescription']
+        except IndexError:   # если в описании нет нужного поля - значит компонент не найден на сайте
+            queries.append({'Part Number': part_number, 'Description': 'Not found',
+                            'Database Name': accessdb.db_name(part_number),
+                            'Database Index': accessdb.db_index(part_number)})
+        else:
+            queries.append({'Part Number': part_number,  # парт намбер берем из таблицы
                             'Description': product['DetailedDescription'],  # берем из описания нужные поля
                             'URL': 'https://www.digikey.com' + product['PartUrl'],
                             'Datasheet': product['PrimaryDatasheet'],
-                            'Manufacturer': product['ManufacturerName']['Text']
+                            'Manufacturer': product['ManufacturerName']['Text'],
+                            'Database Name': accessdb.db_name(part_number),
+                            'Database Index': accessdb.db_index(part_number)
                             })
-        except IndexError:   # если в описании нет нужного поля - значит компонент не найден на сайте
-            queries.append({'Part Number': line_item[column], 'Description': 'Not found'})
-        progress += progress_delta   # считаем прогресс
-        sleep(0.1)
-        app.progressBar.setProperty("value", progress)  # обновляем прогрессбар
+        finally:
+            progress += progress_delta   # считаем прогресс
+            sleep(0.1)
+            app.progressBar.setProperty("value", progress)  # обновляем прогрессбар
     app.progressBar.setProperty("value", 100)  # после обработки всего файла пробресс = 100%
 
     with open(csv_output, 'w', newline='', encoding=encoding) as csv_output:  # создаем файл для записи результата
         csv_writer = csv.DictWriter(csv_output, fieldnames=['Part Number', 'Manufacturer',  # названия столбцов
-                                                            'Description', 'URL', 'Datasheet'], delimiter=delimiter)
+                                                            'Description', 'Database Name',
+                                                            'Database Index', 'URL', 'Datasheet'], delimiter=delimiter)
         csv_writer.writeheader()  # записываем строку с названиями столбцов
         for i in range(len(queries)):   # для всех элементов
             row = {}  # строка которая будет записана

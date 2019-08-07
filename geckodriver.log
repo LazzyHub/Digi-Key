@@ -824,3 +824,193 @@ JavaScript error: resource://activity-stream/lib/ActivityStreamPrefs.jsm, line 2
 [Child 6604, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
 [Child 6604, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chro[Child 4076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
 [Child 4076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562356069/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1563782023654	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.EKSekt9MXein"
+1563782058451	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.5SBgb4IDn3hP"
+1563782059673	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1563782059673	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1563782059673	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1563782059673	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1563782064550	Marionette	INFO	Listening on port 49709
+1563782064998	Marionette	WARN	TLS certificate errors will be ignored for this session
+1563782103744	Marionette	INFO	Stopped listening on port 49709
+[Child 5072, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5072, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5280, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5280, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 5056, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2896, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_15633[Parent 5056, Gecko_IOThread] WARNING: file z:/task_1563378307/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+1564755143082	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.RbJ0gokIn0zA"
+1564755144972	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1564755144972	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1564755144972	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1564755144972	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1564755150565	Marionette	INFO	Listening on port 50993
+1564755150893	Marionette	WARN	TLS certificate errors will be ignored for this session
+1564755223762	Marionette	INFO	Stopped listening on port 50993
+[Child 6988, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6852, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6852, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 6232, Gecko_IOThread] WARNING: file z:/task_1563378307/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[Child 6684, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6684, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/s1564990134380	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.u3TGWbwW3jJD"
+1564990136461	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1564990136461	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1564990136461	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1564990136461	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1564990145662	Marionette	INFO	Listening on port 50289
+1564990146299	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Task cancelled"
+1564990175217	Marionette	INFO	Stopped listening on port 50289
+console.warn: "Error while detaching the thread front: 'detach' request packet to 'server1.conn0.child1/context18' can't be sent as the connection is closed."
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+[[ChilPd 4772, aChrome_ChildrThree[Chnild tad] WARNING:  pip4860, Chrome_ChildThread] WAR5NING: pipe er0ror:8e error: 109,: fi  109: file zG:/task_156337e8307/build/src/cipc/kle z:/task_1563o3783_chromium/src/chrome/common/ipcI_chaO07/build/src/iTpc/chromnnel_win.chc, lrium/src/chreomea/comdine 341
+] WARNING: file z:/task_1563378307/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+mon/ipc_channel_win.cc, line 341
+[Child 4772, Chrome_ChildThread] WARNING: pipe error: 109: fi[Parent 4508, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1564990921761	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.55HNUH8fMjOV"
+1564990922832	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1564990922832	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1564990922833	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1564990922833	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1564990925937	Marionette	INFO	Listening on port 50545
+1564990926119	Marionette	WARN	TLS certificate errors will be ignored for this session
+1564990934854	Marionette	INFO	Stopped listening on port 50545
+[Child 5452, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4308, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4308, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3308, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3308, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1564991892249	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.9HHJPKQVGkkp"
+1564991893616	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1564991893616	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1564991893616	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1564991893616	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1564991897080	Marionette	INFO	Listening on port 50728
+1564991897174	Marionette	WARN	TLS certificate errors will be ignored for this session
+1564991913742	Marionette	INFO	Stopped listening on port 50728
+[Child 4144, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6200, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6200, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1564992068205	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.zXBFZqwRWkb1"
+1564992069496	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1564992069496	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1564992069496	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1564992069496	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1564992072389	Marionette	INFO	Listening on port 50784
+1564992072618	Marionette	WARN	TLS certificate errors will be ignored for this session
+1564992084290	Marionette	INFO	Stopped listening on port 50784
+[Child 6816, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6816, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5464, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5464, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 6936, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7072, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7072, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1564992360477	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.tWEtg3a9HyUO"
+1564992361200	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1564992361200	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1564992361200	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1564992361201	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1564992364267	Marionette	INFO	Listening on port 50848
+1564992364306	Marionette	WARN	TLS certificate errors will be ignored for this session
+1564992383363	Marionette	INFO	Stopped listening on port 50848
+[Parent 6972, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5868, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1268, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1268, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1564992593330	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.CmwCcrES7ET7"
+1564992594549	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1564992594549	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1564992594549	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1564992594549	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1564992597339	Marionette	INFO	Listening on port 50906
+1564992597754	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221564790410142%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:201:13
+
+[Child 5248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6876, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6876, Chrome_ChildThread] WARNING[Child 6448, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 5488, Gecko_IOThread] WARNING: file z:/task_1563378307/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+1564992684928	Marionette	INFO	Stopped listening on port 50906
+1564992765254	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.RlOvbtsT55al"
+1564992766423	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1564992766424	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1564992766424	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1564992766424	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1564992768784	Marionette	INFO	Listening on port 50973
+1564992769096	Marionette	WARN	TLS certificate errors will be ignored for this session
+1564992783095	Marionette	INFO	Stopped listening on port 50973
+[Child 1308, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4736, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7068, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7068, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1565078983692	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.YMNWuaccBhbq"
+1565078984884	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1565078984884	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1565078984884	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1565078984884	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1565078989922	Marionette	INFO	Listening on port 49856
+1565078990340	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 1752, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1752, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6028, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6028, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4464, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4464, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1565079031924	Marionette	INFO	Stopped listening on port 49856
+1565088181240	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.VVjdpmF2yam3"
+1565088184640	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1565088184640	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1565088184641	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1565088184641	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1565088192908	Marionette	INFO	Listening on port 51571
+1565088193347	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 4464, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7444, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7256, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7256, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 4464, Gecko_IOThread] WARNING: file z:/task_1563378307/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+1565088215347	Marionette	INFO	Stopped listening on port 51571
+1565088265447	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.859U8Zxfwtu8"
+1565088266484	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1565088266484	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1565088266485	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1565088266485	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1565088269507	Marionette	INFO	Listening on port 51635
+1565088269747	Marionette	WARN	TLS certificate errors will be ignored for this session
+1565088291609	Marionette	INFO	Stopped listening on port 51635
+[Child 7360, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6800, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6800, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build1565091958013	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\vmezin\\AppData\\Local\\Temp\\rust_mozprofile.N27mZrG3uZXW"
+1565091962965	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1565091962966	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1565091962966	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1565091962966	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1565091971322	Marionette	INFO	Listening on port 52225
+1565091971823	Marionette	WARN	TLS certificate errors will be ignored for this session
+1565091997913	Marionette	INFO	Stopped listening on port 52225
+[Child 6024, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7416, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563378307/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 7796, Gecko_IOThread] WARNING: file z:/task_1563378307/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[Parent 7796, Gecko_IOThread] WARNING: file z:/task_1563378307/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
